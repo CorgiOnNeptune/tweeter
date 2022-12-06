@@ -27,3 +27,13 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+main {
+  background-color: #f4f1ec;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
