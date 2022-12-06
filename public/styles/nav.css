@@ -17,8 +17,7 @@ span {
 
 .logo {
   font-family: 'Bungee', sans-serif;
-  display: flex;
-  margin-top: 2em;
+  font-size: 36px;
 }
 
 .nav-col {
@@ -34,6 +33,7 @@ span {
 }
 
 .write-new-tweet {
+  font-size: 22px;
   margin-top: 1em;
 }
 
