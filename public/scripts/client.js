@@ -26,18 +26,20 @@ const createTweetElement = function (tweet) {
     class: "tweet-avatar",
     src: tweet.user.avatars
   });
-  const $tweetHandle = $(`<div class="tweet-handle"><p>${tweet.user.handle}</p></div>`)
+  const $tweetHandle = $(`<div class="tweet-handle"><p>${tweet.user.handle}</p></div>`);
 
-  const $body = $(`<div class="tweet-body"><p>${tweet.content.text}</p></div>`)
+  const $body = $(`<div class="tweet-body"><p>${tweet.content.text}</p></div>`);
 
   // Create 'footer' elements of the tweet card
   const $footer = $(`<footer>`);
   const $timestamp = $(`<p>${tweet.createdAt}</p>`);
-  const $icons = $(`<div class="tweet-interaction-icons">
-  <i class="fa-regular fa-flag"></i>
-  <i class="fa-regular fa-share-from-square"></i>
-  <i class="fa-regular fa-heart"></i>
-  </div>`);
+  const $icons = $(
+    `<div class="tweet-interaction-icons">
+    <i class="fa-regular fa-flag"></i>
+    <i class="fa-regular fa-share-from-square"></i>
+    <i class="fa-regular fa-heart"></i>
+    </div>`
+  );
 
   $tweetInfo.prepend($tweetAvatar);
   $header.append($tweetInfo, $tweetHandle);
