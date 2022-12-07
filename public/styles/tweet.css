@@ -42,11 +42,11 @@ article.tweet header > * {
   width: 64px;
 }
 
-.tweet-tag {
+.tweet-handle {
   color: #7f8392;
 }
 
-.tweet-tag:hover {
+.tweet-handle:hover {
   color: #a5adca;
 }
 
