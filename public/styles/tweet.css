@@ -1,17 +1,17 @@
 article.tweet {
+  display: flex;
+  flex-direction: column;
   border: 5px solid #555149;
   color: #555149;
   font-weight: 400;
   height: 250px;
   width: 800px;
-  display: flex;
-  flex-direction: column;
   margin: 30px;
 }
 
 /* Apply to 'article.tweet' when hovered */
 article.tweet:hover {
-  box-shadow: 10px 5px 5px #989cac;
+  box-shadow: 10px 10px 5px #989cac;
 }
 
 article.tweet header {
@@ -25,18 +25,17 @@ article.tweet header {
 /* Apply to children of .tweet header */
 article.tweet header > * {
   display: flex;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 .tweet-info p {
-  font-weight: 300;
   display: flex;
   align-items: center;
+  font-weight: 300;
 }
 
 .tweet-avatar {
-  margin-left: 15px;
   margin-right: 25px;
   margin-top: 10px;
   height: 64px;

@@ -40,8 +40,8 @@ span {
 }
 
 .double-arrows {
-  color: rgb(213, 77, 28);
   display: flex;
   justify-content: center;
-  margin-top: -1em;
+  color: rgb(213, 77, 28);
+  margin-top: -0.75em;
 }
