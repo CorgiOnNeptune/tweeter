@@ -1,7 +1,7 @@
 nav {
   display: flex;
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: #4056a1;
+  color: #ffffff;
   position: fixed;
   top: 0;
   height: 120px;
@@ -10,11 +10,6 @@ nav {
 
 span {
   margin: 1.5em;
-}
-
-.non-italic {
-  font-weight: bold;
-  font-style: normal;
 }
 
 .logo {
@@ -37,6 +32,11 @@ span {
 .write-new-tweet {
   font-size: 22px;
   margin-top: 1em;
+}
+
+.non-italic {
+  font-weight: bold;
+  font-style: normal;
 }
 
 .double-arrows {

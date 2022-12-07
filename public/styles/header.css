@@ -1,7 +1,7 @@
-header.page-header {
+.page-header {
   background-color: #644b6a;
   background-image: url('../images/body-bg-texture.png');
-  color: #FFFFFF;
+  color: #ffffff;
   height: 400px;
   margin-top: 120px;
   display: flex;

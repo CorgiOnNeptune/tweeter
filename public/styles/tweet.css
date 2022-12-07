@@ -2,7 +2,7 @@ article.tweet {
   border: 5px solid #555149;
   color: #555149;
   font-weight: 400;
-  height: 270px;
+  height: 250px;
   width: 800px;
   display: flex;
   flex-direction: column;
@@ -23,20 +23,21 @@ article.tweet header {
 /* Apply to children of .tweet header */
 article.tweet header > * {
   display: flex;
-  margin: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
-.poster-info p {
+.posters-info p {
   font-weight: 300;
 }
 
-p.user-avatar {
+.posters-avatar {
   margin-left: 15px;
   margin-right: 25px;
 }
 
-.poster-tag {
-  color: #b8bed1;
+.posters-tag {
+  color: #a5adca;
 }
 
 .tweet-body p {
@@ -59,7 +60,7 @@ article.tweet footer > * {
   margin: 15px;
 }
 
-/* Apply to all icons on a tweet */
+/* Apply to all icons on a tweet footer */
 .tweet-interaction-icons > * {
   margin: 7px;
   margin-top: 3px;
