@@ -2,14 +2,14 @@ $(document).ready(function() {
   $('#new-tweet-text').on('input', function () {   
     const counter = $('.counter');
     const tweetLength = $(this).val().length;
-    let counterLength = 140 - tweetLength;
+    const counterLength = 140 - tweetLength;
 
     if (counterLength < 0) {
-      counter.addClass('negative-char');
+      counter.addClass('red-text');
     }
 
     if (counterLength >= 0) {
-      counter.removeClass('negative-char');
+      counter.removeClass('red-text');
     }
 
     counter.val(counterLength);
