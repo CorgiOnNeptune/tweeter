@@ -6,6 +6,7 @@ article.tweet {
   width: 800px;
   display: flex;
   flex-direction: column;
+  margin: 30px;
 }
 
 /* Apply to 'article.tweet' when hovered */
@@ -16,8 +17,9 @@ article.tweet:hover {
 article.tweet header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: -10px;
+  align-items: center;
   height: 100px;
+  top: 0;
 }
 
 /* Apply to children of .tweet header */
@@ -27,20 +29,25 @@ article.tweet header > * {
   margin-right: 15px;
 }
 
-.posters-info p {
+.tweet-info p {
   font-weight: 300;
+  display: flex;
+  align-items: center;
 }
 
-.posters-avatar {
+.tweet-avatar {
   margin-left: 15px;
   margin-right: 25px;
+  margin-top: 10px;
+  height: 64px;
+  width: 64px;
 }
 
-.posters-tag {
+.tweet-tag {
   color: #7f8392;
 }
 
-.posters-tag:hover {
+.tweet-tag:hover {
   color: #a5adca;
 }
 
