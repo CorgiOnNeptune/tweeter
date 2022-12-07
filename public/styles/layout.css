@@ -37,11 +37,44 @@ main {
 }
 
 article.tweet {
+  border: 5px solid #555149;
+  color: black;
+  width: 900px;
   display: flex;
-  justify-content: center;
-  width: 100%;
+  flex-direction: column;
 }
 
-article.tweet header {}
+article.tweet header {
+  display: flex;
+  justify-content: space-between;
+}
 
-article.tweet footer {}
+/* Apply to children of .tweet header */
+article.tweet header > * {
+  display: flex;
+  margin: 20px;
+}
+
+p.user-avatar {
+  margin-right: 25px;
+}
+
+.tweet-body p {
+  display: flex;
+  margin: 25px;
+}
+
+article.tweet footer {
+  margin: 15px;
+  border-top: 5px solid #555149;
+  display: flex;
+  justify-content: space-between;
+}
+
+article.tweet footer > * {
+  margin: 20px;
+}
+
+.tweet-interaction-icons > * {
+  font-size: 70%;
+}
