@@ -71,7 +71,8 @@
     </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main class="container" id="main-container">
+      <!-- Compose new tweet -->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form class="tweet-form" action="/tweets" method="POST">
@@ -87,6 +88,35 @@
           </div>
         </form>
       </section>
+
+      <!-- Tweet Feed -->
+
+      <article class="tweet">
+        <header>
+          <div class="poster-info">
+            <i class="fa-light fa-face-awesome"></i>
+            <p>Posters name</p>
+          </div>
+          <p>Posters tag</p>
+        </header>
+
+        <div class="tweet-body">
+          <p>Insert crazy text about this tweet</p>
+        </div>
+
+        <footer>
+          <!-- Add a top border on this box  -->
+          <p>Timestamp</p>
+          <div class="tweet-interaction">
+            <i class="fa-regular fa-flag"></i>
+            <!-- <i class="fa-solid fa-flag"></i> -->
+            <i class="fa-light fa-retweet"></i>
+            <!-- <i class="fa-regular fa-retweet"></i> -->
+            <i class="fa-regular fa-heart"></i>
+            <!-- <i class="fa-solid fa-heart"></i> -->
+          </div>
+        </footer>
+      </article>
 
       <h1>Here's a Title</h1>
       <p>
