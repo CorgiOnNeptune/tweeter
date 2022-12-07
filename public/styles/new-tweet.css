@@ -30,15 +30,14 @@
   margin-bottom: 0.5em;
 }
 
-
 .new-tweet-footer button {
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: #4056a1;
+  color: #ffffff;
   font-size: 20px;
   border: none;
   padding: 5px;
 }
 
 .red-text {
-  color: #FF0000;
+  color: #ff0000;
 }
