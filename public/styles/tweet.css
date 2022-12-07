@@ -9,7 +9,7 @@ article.tweet {
 }
 
 /* Apply to 'article.tweet' when hovered */
-.box-shadow {
+article.tweet:hover {
   box-shadow: 10px 5px 5px #989cac;
 }
 
@@ -37,6 +37,10 @@ article.tweet header > * {
 }
 
 .posters-tag {
+  color: #7f8392;
+}
+
+.posters-tag:hover {
   color: #a5adca;
 }
 
