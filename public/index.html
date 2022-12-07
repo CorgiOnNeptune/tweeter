@@ -60,7 +60,7 @@
     </nav>
 
     <!-- Header -->
-    <header>
+    <header class="page-header">
       <div>
         <img src="/images/profile-hex.png" />
       </div>
@@ -74,7 +74,7 @@
     <main class="container" id="main-container">
       <!-- Compose new tweet -->
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <!-- <h2>Compose Tweet</h2> -->
         <form class="tweet-form" action="/tweets" method="POST">
           <textarea
             name="text"
@@ -92,9 +92,9 @@
       <!-- Tweet Feed -->
 
       <article class="tweet">
-        <header>
+        <header class="tweet-header">
           <div class="poster-info">
-            <i class="fa-light fa-face-awesome"></i>
+            <i class="fa-light fa-face-awesome">Face</i>
             <p>Posters name</p>
           </div>
           <p>Posters tag</p>
@@ -105,9 +105,9 @@
         </div>
 
         <footer>
-          <!-- Add a top border on this box  -->
+          <!--TODO Add a top border on this box and box shadow -->
           <p>Timestamp</p>
-          <div class="tweet-interaction">
+          <div class="tweet-interaction-icons">
             <i class="fa-regular fa-flag"></i>
             <!-- <i class="fa-solid fa-flag"></i> -->
             <i class="fa-light fa-retweet"></i>
