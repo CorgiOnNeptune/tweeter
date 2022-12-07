@@ -1,17 +1,23 @@
 article.tweet {
   border: 5px solid #555149;
   color: #555149;
-  font-weight: 600;
-  height: 275px;
+  font-weight: 400;
+  height: 270px;
   width: 800px;
   display: flex;
   flex-direction: column;
+}
+
+/* Apply to 'article.tweet' when hovered */
+.box-shadow {
+  box-shadow: 10px 5px 5px #989cac;
 }
 
 article.tweet header {
   display: flex;
   justify-content: space-between;
   margin-bottom: -10px;
+  height: 100px;
 }
 
 /* Apply to children of .tweet header */
@@ -25,34 +31,32 @@ article.tweet header > * {
 }
 
 p.user-avatar {
-  margin-left: 25px;
+  margin-left: 15px;
   margin-right: 25px;
 }
 
 .poster-tag {
-  margin-right: 25px;
   color: #b8bed1;
 }
 
 .tweet-body p {
-  font-weight: 400;
-  margin: 25px;
+  margin-left: 40px;
   margin-bottom: 15px;
+  line-height: 30px;
 }
 
 article.tweet footer {
+  display: flex;
+  justify-content: space-between;
   margin: 15px;
   margin-top: 5px;
   border-top: 5px solid #555149;
-  display: flex;
-  justify-content: space-between;
 }
 
 /* Apply to children of .tweet footer */
 article.tweet footer > * {
   font-size: 16px;
   margin: 15px;
-  margin-top: 10px;
 }
 
 /* Apply to all icons on a tweet */
