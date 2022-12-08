@@ -45,8 +45,6 @@ $(document).ready(function () {
   loadTweets();
 });
 
-
-
 const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     let $tweet = createTweetElement(tweet);
@@ -55,7 +53,7 @@ const renderTweets = function(tweets) {
   }
 };
 
-const createTweetElement = function (tweet) {
+const createTweetElement = function(tweet) {
   const $tweet = $(`<article>`, { class: 'tweet' });
 
   // Create 'header' elements of the tweet card
@@ -71,7 +69,7 @@ const createTweetElement = function (tweet) {
 
   // Create 'footer' elements of the tweet card
   const $footer = $(`<footer>`);
-  const $timestamp = $(`<p>${tweet.createdAt}</p>`);
+  const $timestamp = $(`<p>${timeago.format(tweet.createdAt)}</p>`);
   const $icons = $(
     `<div class="tweet-interaction-icons">
     <i class="fa-regular fa-flag"></i>
