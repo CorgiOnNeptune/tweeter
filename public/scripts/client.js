@@ -4,11 +4,51 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(document).ready(function() {
-  renderTweets(tempData);
+$(document).ready(function () {
+
+  // AJAX Form submission
+  $('#tweet-form').submit(function(event) {
+    event.preventDefault();
+
+    const $form = $(this);
+    const url = $form.attr('action');
+
+    $.ajax({
+      method: 'POST',
+      data: $form.serialize(),
+      url,
+    })
+    //TODO Use this?
+      .then((data) => {
+        console.log('data ➡️ ', data);
+      
+      })
+      .catch((err) => {
+        console.log('error', err);
+      })
+  });
+
+  const loadTweets = () => {
+    $.ajax({
+      method: 'GET',
+      url: '/tweets'
+    })
+      .then((data) => {
+        console.log('data', data);
+        renderTweets(data);
+      })
+
+      .catch((err) => {
+        console.log('error ➡️ ', err);
+    })
+  }
+
+  loadTweets();
 });
 
-const renderTweets = function (tweets) {
+
+
+const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     let $tweet = createTweetElement(tweet);
 
@@ -48,31 +88,3 @@ const createTweetElement = function (tweet) {
 
   return $tweet;
 };
-
-
-// Temporary test data. TODO - Get from server.
-const tempData = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders ofgiants"
-    },
-    "createdAt": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "createdAt": 1461113959088
-  }
-];
