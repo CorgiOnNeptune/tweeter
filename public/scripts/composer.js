@@ -11,13 +11,15 @@ $(document).ready(function () {
   $(window).scroll(function () {
     const scrollHeight = $('nav').height() * 3;
     const scrollButton = $('.scroll-top-button');
+    const navButton = $('.nav-col-2');
 
     if (($(this)).scrollTop() >= scrollHeight) {
-      
+      navButton.fadeOut();
       return scrollButton.fadeIn();
     }
 
     if (($(this)).scrollTop() < scrollHeight) {
+      navButton.fadeIn();
       return scrollButton.fadeOut();
     }
   });
