@@ -1,5 +1,6 @@
 nav {
   display: flex;
+  background-image: var(--top-bg-image);
   background-color: #4056a1;
   color: #ffffff;
   position: fixed;
@@ -40,8 +41,19 @@ span {
 }
 
 .double-arrows {
+  animation: MoveUpDown 2.5s linear infinite;
   display: flex;
   justify-content: center;
   color: rgb(213, 77, 28);
   margin-top: -0.75em;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }

@@ -17,6 +17,11 @@ html {
  * Global layout stuff
  */
 
+:root {
+  --top-bg-image: url('../images/header-bg-texture.png');
+  --top-bg-color: #a18b40;
+}
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;

@@ -38,6 +38,10 @@
   padding: 5px;
 }
 
+button:active {
+  /* ToDO */
+}
+
 .red-text {
   color: #ff0000;
 }
