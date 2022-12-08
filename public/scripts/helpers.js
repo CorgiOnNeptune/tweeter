@@ -8,7 +8,7 @@ const solidIcons = () => {
   });
 }
 
-const handleError = (boolean, element, msg) => {
+const handleErrorHTML = (boolean, element, msg) => {
   if (!boolean) {
     return;
   }

@@ -19,7 +19,12 @@ html {
 
 :root {
   --top-bg-image: url('../images/header-bg-texture.png');
-  --top-bg-color: #a18b40;
+}
+
+/* em tags pref bold over italic */
+em {
+  font-weight: bold;
+  font-style: normal;
 }
 
 body {

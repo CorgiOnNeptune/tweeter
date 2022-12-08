@@ -40,7 +40,7 @@
   background-color: #4056a1;
   color: #ffffff;
   font-size: 20px;
-  border: none;
+  border-radius: 5px;
   padding: 5px;
 }
 
@@ -52,8 +52,9 @@
   display: none;
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
-  width: 750px;
+  width: 600px;
   padding: 15px;
   color: #ff0000;
   border: 5px solid #ff0000;
+  border-radius: 8px;
 }

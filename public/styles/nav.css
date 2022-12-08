@@ -35,11 +35,6 @@ span {
   margin-top: 1em;
 }
 
-.non-italic {
-  font-weight: bold;
-  font-style: normal;
-}
-
 .double-arrows {
   animation: MoveUpDown 2.5s linear infinite;
   display: flex;

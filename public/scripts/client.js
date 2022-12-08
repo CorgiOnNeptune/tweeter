@@ -13,11 +13,11 @@ $(document).ready(function() {
     const $form = $(this);
     const $error = $('.tweet-error');
     const url = $form.attr('action');
-    let inputText = $form.children($('textarea')).val();
+    const inputText = $form.children($('textarea')).val();
 
     // handleError function located in '/helpers.js'
-    handleError(inputText.length > 140, $error, 'Your message is too long');
-    handleError(!inputText, $error, 'You did not enter a message');
+    handleErrorHTML(inputText.length > 140, $error, 'Your message is too long');
+    handleErrorHTML(!inputText, $error, 'You did not enter a message');
 
     $.ajax({
       method: 'POST',
@@ -58,7 +58,7 @@ $(document).ready(function() {
 
 const renderTweets = function(tweets) {
   for (const tweet of tweets) {
-    let $tweet = createTweetElement(tweet);
+    const $tweet = createTweetElement(tweet);
 
     $('#tweets-container').prepend($tweet);
   }

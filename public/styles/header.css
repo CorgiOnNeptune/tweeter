@@ -9,6 +9,12 @@
   margin-top: 120px;
 }
 
+.user-name {
+  margin: 20px;
+  font-size: 26pt;
+  font-weight: 300;
+}
+
 img {
   margin-top: 1em;
 }
