@@ -4,23 +4,19 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(document).ready(function () {
+$(document).ready(function() {
 
   // AJAX POST new tweet to '/tweets'
   $('#tweet-form').submit(function(event) {
     event.preventDefault();
 
     const $form = $(this);
+    const $error = $('.tweet-error');
     const url = $form.attr('action');
     let inputText = $form.children($('textarea')).val();
 
-    if (inputText.length > 140) {
-      return alert('Your message is too long!');
-    }
-
-    if (!inputText) {
-      return alert('No message entered.');
-    }
+    handleError(inputText.length > 140, $error, 'Your message is too long');
+    handleError(!inputText, $error, 'You did not enter a message');
 
     $.ajax({
       method: 'POST',
@@ -28,6 +24,7 @@ $(document).ready(function () {
       url,
     })
       .then(() => {
+        $error.slideUp('slow');
         $(this).each(function () {
           this.reset();
         });
@@ -110,4 +107,15 @@ const solidIcons = () => {
       $(this).removeClass('fa-solid');
     })
   });
+}
+
+const handleError = (boolean, element, msg) => {
+  if (!boolean) {
+    return;
+  }
+  const warningIcon = '<i class="fa-solid fa-triangle-exclamation"></i>';
+
+  element.hide();
+  element.html(`${warningIcon} ${msg} ${warningIcon}`);
+  return element.slideDown('slow');
 }
