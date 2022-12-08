@@ -45,6 +45,10 @@
   padding: 5px;
 }
 
+.new-tweet-footer button:hover {
+  cursor: pointer;
+}
+
 .red-text {
   color: #ff0000;
 }

@@ -8,6 +8,7 @@ const solidIcons = () => {
   });
 };
 
+
 const handleErrorHTML = (boolean, element, msg) => {
   if (!boolean) {
     return;
@@ -18,6 +19,7 @@ const handleErrorHTML = (boolean, element, msg) => {
   element.html(`${warningIcon} ${msg} ${warningIcon}`);
   return element.slideDown('slow');
 };
+
 
 const animateNewTweetForm = () => {
   const $newTweet = $('.new-tweet');
@@ -31,8 +33,11 @@ const animateNewTweetForm = () => {
       duration: 'slow',
       start: function () {
         $newTweet.css('display', 'flex');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      },
+      complete: function () {
+        $('#new-tweet-text').focus();
       }
     });
-    $('#new-tweet-text').focus();
   }
 };
