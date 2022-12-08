@@ -15,6 +15,7 @@ $(document).ready(function() {
     const url = $form.attr('action');
     let inputText = $form.children($('textarea')).val();
 
+    // handleError function located in '/helpers.js'
     handleError(inputText.length > 140, $error, 'Your message is too long');
     handleError(!inputText, $error, 'You did not enter a message');
 
@@ -98,24 +99,3 @@ const createTweetElement = function (tweet) {
 
   return $tweet;
 };
-
-const solidIcons = () => {
-  $('.tweet-interaction-icons').children().each(function() {
-    $(this).hover(function() {
-      $(this).addClass('fa-solid');
-    }, function() {
-      $(this).removeClass('fa-solid');
-    })
-  });
-}
-
-const handleError = (boolean, element, msg) => {
-  if (!boolean) {
-    return;
-  }
-  const warningIcon = '<i class="fa-solid fa-triangle-exclamation"></i>';
-
-  element.hide();
-  element.html(`${warningIcon} ${msg} ${warningIcon}`);
-  return element.slideDown('slow');
-}
