@@ -6,7 +6,7 @@ article.tweet {
   font-weight: 400;
   height: 275px;
   width: 800px;
-  margin: 30px;
+  margin: 2rem;
 }
 
 /* Apply to 'article.tweet' when hovered */
@@ -25,8 +25,8 @@ article.tweet header {
 /* Apply to children of .tweet header */
 article.tweet header > * {
   display: flex;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 1.75rem;
+  margin-right: 1.75rem;
 }
 
 .tweet-info p {
@@ -36,8 +36,8 @@ article.tweet header > * {
 }
 
 .tweet-avatar {
-  margin-right: 25px;
-  margin-top: 10px;
+  margin-right: 1.75rem;
+  margin-top: 0.6rem;
   height: 64px;
   width: 64px;
 }
@@ -51,29 +51,29 @@ article.tweet header > * {
 }
 
 .tweet-body p {
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-bottom: 15px;
-  line-height: 30px;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 2rem;
   word-wrap: break-word;
 }
 
 article.tweet footer {
   display: flex;
   justify-content: space-between;
-  margin: 15px;
-  margin-top: 5px;
+  margin: 1rem;
+  margin-top: 0.33rem;
   border-top: 5px solid #555149;
 }
 
 /* Apply to children of .tweet footer */
 article.tweet footer > * {
-  font-size: 16px;
-  margin: 15px;
+  font-size: 1rem;
+  margin: 1.25rem;
 }
 
 /* Apply to all icons on a tweet footer */
 .tweet-interaction-icons > * {
-  margin: 7px;
-  margin-top: 3px;
+  margin: 0.5rem;
+  margin-top: 0.25rem;
 }

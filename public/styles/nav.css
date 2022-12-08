@@ -15,7 +15,7 @@ span {
 
 .logo {
   font-family: 'Bungee', sans-serif;
-  font-size: 36px;
+  font-size: 2.25rem;
 }
 
 .nav-col {
@@ -32,15 +32,15 @@ span {
 }
 
 .write-new-tweet {
-  font-size: 22px;
-  margin-top: 1em;
+  font-size: 1.5rem;
+  margin-top: 0.75em;
 }
 
 .double-arrows {
   animation: MoveUpDown 2.5s linear infinite;
   display: flex;
   justify-content: center;
-  color: rgb(213, 77, 28);
+  color: #d54d1c;
   margin-top: -0.75em;
 }
 
@@ -50,6 +50,6 @@ span {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-0.5rem);
   }
 }
