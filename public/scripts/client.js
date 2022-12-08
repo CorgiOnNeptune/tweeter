@@ -34,7 +34,6 @@ $(document).ready(function () {
       url: '/tweets'
     })
       .then((data) => {
-        console.log('data', data);
         renderTweets(data);
       })
 
