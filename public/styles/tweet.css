@@ -4,7 +4,7 @@ article.tweet {
   border: 5px solid #555149;
   color: #555149;
   font-weight: 400;
-  height: 250px;
+  height: 275px;
   width: 800px;
   margin: 30px;
 }
@@ -52,8 +52,10 @@ article.tweet header > * {
 
 .tweet-body p {
   margin-left: 40px;
+  margin-right: 40px;
   margin-bottom: 15px;
   line-height: 30px;
+  word-wrap: break-word;
 }
 
 article.tweet footer {

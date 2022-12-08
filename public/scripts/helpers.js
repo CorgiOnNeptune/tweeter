@@ -17,7 +17,11 @@ const handleErrorHTML = (boolean, element, msg) => {
 
   element.hide();
   element.html(`${warningIcon} ${msg} ${warningIcon}`);
-  return element.slideDown('slow');
+  element.slideDown('slow');
+
+  const error = new Error(msg);
+  error.code = 400;
+  throw error;
 };
 
 
