@@ -6,12 +6,21 @@
 
 $(document).ready(function () {
 
-  // AJAX Form submission
+  // AJAX POST new tweet to '/tweets'
   $('#tweet-form').submit(function(event) {
     event.preventDefault();
 
     const $form = $(this);
     const url = $form.attr('action');
+    const inputText = $form.children($('textarea')).val();
+
+    if (inputText.length > 140) {
+      return alert('Your message is too long!');
+    }
+
+    if (!inputText) {
+      return alert('No message entered.');
+    }
 
     $.ajax({
       method: 'POST',
@@ -28,6 +37,7 @@ $(document).ready(function () {
       })
   });
 
+  // AJAX GET tweets from server '/tweets'
   const loadTweets = () => {
     $.ajax({
       method: 'GET',
@@ -49,11 +59,12 @@ const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     let $tweet = createTweetElement(tweet);
 
-    $('#tweets-container').append($tweet);
+    $('#tweets-container').prepend($tweet);
   }
 };
 
-const createTweetElement = function(tweet) {
+const createTweetElement = function (tweet) {
+  const timestamp = timeago.format(tweet.createdAt);
   const $tweet = $(`<article>`, { class: 'tweet' });
 
   // Create 'header' elements of the tweet card
@@ -69,7 +80,7 @@ const createTweetElement = function(tweet) {
 
   // Create 'footer' elements of the tweet card
   const $footer = $(`<footer>`);
-  const $timestamp = $(`<p>${timeago.format(tweet.createdAt)}</p>`);
+  const $timestamp = $(`<p>${timestamp}</p>`);
   const $icons = $(
     `<div class="tweet-interaction-icons">
     <i class="fa-regular fa-flag"></i>
