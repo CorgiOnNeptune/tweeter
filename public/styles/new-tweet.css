@@ -17,6 +17,10 @@
   overflow: hidden;
 }
 
+#new-tweet-text:focus {
+  outline: none;
+}
+
 ::placeholder {
   color: #555149;
   font-weight: 600;
@@ -36,10 +40,6 @@
   font-size: 20px;
   border: none;
   padding: 5px;
-}
-
-button:active {
-  /* ToDO */
 }
 
 .red-text {

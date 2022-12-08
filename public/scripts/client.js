@@ -12,7 +12,7 @@ $(document).ready(function () {
 
     const $form = $(this);
     const url = $form.attr('action');
-    const inputText = $form.children($('textarea')).val();
+    let inputText = $form.children($('textarea')).val();
 
     if (inputText.length > 140) {
       return alert('Your message is too long!');
@@ -27,9 +27,11 @@ $(document).ready(function () {
       data: $form.serialize(),
       url,
     })
-    //TODO Use this?
-      .then((data) => {
-        console.log('data ➡️ ', data);
+      .then(() => {
+        $(this).each(function () {
+          this.reset();
+        });
+        loadTweets();
       
       })
       .catch((err) => {
