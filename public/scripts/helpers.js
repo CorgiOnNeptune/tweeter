@@ -4,9 +4,9 @@ const solidIcons = () => {
       $(this).addClass('fa-solid');
     }, function() {
       $(this).removeClass('fa-solid');
-    })
+    });
   });
-}
+};
 
 const handleErrorHTML = (boolean, element, msg) => {
   if (!boolean) {
@@ -17,4 +17,21 @@ const handleErrorHTML = (boolean, element, msg) => {
   element.hide();
   element.html(`${warningIcon} ${msg} ${warningIcon}`);
   return element.slideDown('slow');
-}
+};
+
+const animateNewTweetForm = () => {
+  const $newTweet = $('.new-tweet');
+  if ($newTweet.is(':visible')) {
+    $('.tweet-error').slideUp('slow');
+    return $newTweet.slideUp('slow');
+  }
+
+  if (!$newTweet.is(':visible')) {
+    $newTweet.slideDown({
+      duration: 'slow',
+      start: function () {
+        $newTweet.css('display', 'flex');
+      }
+    });
+  }
+};

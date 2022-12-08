@@ -5,6 +5,10 @@
  */
 
 $(document).ready(function() {
+  
+  $('.nav-col-2').click(function() {
+    animateNewTweetForm();
+  });
 
   // AJAX POST new tweet to '/tweets'
   $('#tweet-form').submit(function(event) {
@@ -26,7 +30,7 @@ $(document).ready(function() {
     })
       .then(() => {
         $error.slideUp('slow');
-        $(this).each(function () {
+        $(this).each(function() {
           this.reset();
         });
         loadTweets();
@@ -34,7 +38,7 @@ $(document).ready(function() {
       })
       .catch((err) => {
         console.log('error', err);
-      })
+      });
   });
 
   // AJAX GET tweets from server '/tweets'
@@ -50,8 +54,8 @@ $(document).ready(function() {
 
       .catch((err) => {
         console.log('error ➡️ ', err);
-    })
-  }
+      });
+  };
 
   loadTweets();
 });
@@ -64,7 +68,7 @@ const renderTweets = function(tweets) {
   }
 };
 
-const createTweetElement = function (tweet) {
+const createTweetElement = function(tweet) {
   const timePosted = timeago.format(tweet.createdAt);
   const $tweet = $(`<article>`, { class: 'tweet' });
 
