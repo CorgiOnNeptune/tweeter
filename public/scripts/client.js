@@ -67,23 +67,25 @@ const renderTweets = function(tweets) {
 };
 
 const createTweetElement = function (tweet) {
-  const timestamp = timeago.format(tweet.createdAt);
+  const timePosted = timeago.format(tweet.createdAt);
   const $tweet = $(`<article>`, { class: 'tweet' });
 
   // Create 'header' elements of the tweet card
   const $header = $(`<header>`);
-  const $tweetInfo = $(`<div class="tweet-info"><p>${tweet.user.name}</p></div>`);
+  const $tweetInfo = $(`<div class="tweet-info">`);
+  $(`<p>`).text(tweet.user.name).appendTo($tweetInfo);
   const $tweetAvatar = $('<img>', {
     class: "tweet-avatar",
     src: tweet.user.avatars
   });
   const $tweetHandle = $(`<div class="tweet-handle"><p>${tweet.user.handle}</p></div>`);
 
-  const $body = $(`<div class="tweet-body"><p>${tweet.content.text}</p></div>`);
+  const $body = $(`<div class="tweet-body">`);
+  $(`<p>`).text(tweet.content.text).appendTo($body);
 
   // Create 'footer' elements of the tweet card
   const $footer = $(`<footer>`);
-  const $timestamp = $(`<p>${timestamp}</p>`);
+  const $timestamp = $(`<p>${timePosted}</p>`);
   const $icons = $(
     `<div class="tweet-interaction-icons">
     <i class="fa-regular fa-flag"></i>
