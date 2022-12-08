@@ -33,5 +33,6 @@ const animateNewTweetForm = () => {
         $newTweet.css('display', 'flex');
       }
     });
+    $('#new-tweet-text').focus();
   }
 };
