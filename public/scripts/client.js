@@ -47,6 +47,7 @@ $(document).ready(function () {
     })
       .then((data) => {
         renderTweets(data);
+        solidIcons();
       })
 
       .catch((err) => {
@@ -98,3 +99,13 @@ const createTweetElement = function (tweet) {
 
   return $tweet;
 };
+
+const solidIcons = () => {
+  $('.tweet-interaction-icons').children().each(function() {
+    $(this).hover(function() {
+      $(this).addClass('fa-solid');
+    }, function() {
+      $(this).removeClass('fa-solid');
+    })
+  });
+}
