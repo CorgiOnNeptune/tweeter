@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  
+  // Animate the character counter for the new tweet form
   $('#new-tweet-text').on('input', function() {
     const $counter = $('.counter');
     const tweetLength = $(this).val().length;
@@ -8,6 +10,7 @@ $(document).ready(function() {
     $counter.val(counterLength);
   });
 
+  // Animate in/out for the scroll-top button and nav 'write-new-tweet' based on user's position on page
   $(window).scroll(function() {
     const scrollHeight = $('nav').height() * 3;
     const scrollButton = $('.scroll-top-button');
@@ -24,6 +27,7 @@ $(document).ready(function() {
     }
   });
   
+  // Upon clicking the scroll-top button, smooth scroll animation to top and open tweet form if it is closed
   $('.scroll-top-button').click(function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
@@ -31,4 +35,5 @@ $(document).ready(function() {
       animateNewTweetForm();
     }
   });
+  
 });

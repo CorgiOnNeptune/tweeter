@@ -1,3 +1,4 @@
+// Function targets each icon child in the tweet article footers to fill the icons in with solid color.
 const solidIcons = () => {
   $('.tweet-interaction-icons').children().each(function() {
     $(this).hover(function() {
@@ -8,7 +9,7 @@ const solidIcons = () => {
   });
 };
 
-
+// Function sends an HTML animated error when new tweet input isn't good
 const handleErrorHTML = (boolean, element, msg) => {
   if (!boolean) {
     return;
@@ -24,7 +25,7 @@ const handleErrorHTML = (boolean, element, msg) => {
   throw error;
 };
 
-
+// Animates new tweet form when accessing it via either the header button or scroll to top button
 const animateNewTweetForm = () => {
   const $newTweet = $('.new-tweet');
   if ($newTweet.is(':visible')) {
