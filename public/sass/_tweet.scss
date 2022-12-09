@@ -2,7 +2,7 @@ article.tweet {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 5px solid #555149;
+  border: $tweet-border;
   color: #555149;
   font-size: 1.25rem;
   min-height: 25%;
@@ -102,7 +102,7 @@ article.tweet footer {
   justify-content: space-between;
   margin: 0.5rem;
   margin-top: 0.33rem;
-  border-top: 5px solid #555149;
+  border-top: $tweet-border;
 }
 
 /* Apply to children of .tweet footer */

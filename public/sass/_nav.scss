@@ -1,7 +1,7 @@
 nav {
   display: flex;
   background-image: $nav-bg-image;
-  background-color: #a18b40;
+  background-color: $theme-complimentary;
   color: #ffffff;
   position: fixed;
   top: 0;
@@ -19,7 +19,7 @@ nav {
 
 @media screen and (min-width: 1024px) {
   nav {
-    background-color: #4056a1;
+    background-color: $theme-color;
     height: 10vh;
   }
 }
@@ -55,7 +55,7 @@ span {
 @media screen and (min-width: 768px) {
   .write-new-tweet {
     font-size: 1.5rem;
-    margin-right: 5rem;
+    margin-right: 1rem;
     margin-top: -2rem;
     text-align: none;
   }
@@ -65,16 +65,31 @@ span {
   animation: MoveUpDown 2.5s linear infinite;
   display: flex;
   justify-content: center;
-  color: #d54d1c;
+  color: $theme-color;
   margin-top: -0.75rem;
 }
 
-@keyframes MoveUpDown {
-  0%,
-  100% {
-    transform: translateY(0);
+@media screen and (min-width: 1024px) {
+  .double-arrows {
+    color: $theme-complimentary;
   }
-  50% {
-    transform: translateY(-0.5rem);
-  }
+}
+
+.scroll-top-button {
+  display: none;
+  position: fixed;
+  bottom: 3rem;
+  right: 5rem;
+  background-color: $theme-color;
+  color: #ffffff;
+  font-size: 2.5rem;
+  border: none;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.scroll-top-button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 15px 1px $theme-complimentary,
+    inset -0.2em -0.2em 0.2em 0 rgba(0, 0, 0, 0.5);
 }

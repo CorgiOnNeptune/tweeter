@@ -1,1 +1,14 @@
 $nav-bg-image: url('../images/header-bg-texture.png');
+$tweet-border: 5px solid #555149;
+$theme-color: #4056a1;
+$theme-complimentary: #d54d1c;
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+}
