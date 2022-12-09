@@ -5,7 +5,6 @@
  */
 html {
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 *,
@@ -27,7 +26,7 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.5rem;
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: whitesmoke;
   margin-bottom: 5rem;
   width: 100%;
 }
@@ -62,8 +61,8 @@ main {
   }
 }
 /*
-  Nav bar stylings
-*/
+ * Nav bar stylings
+ */
 nav {
   display: flex;
   background-image: url("../images/header-bg-texture.png");
@@ -153,15 +152,15 @@ nav .nav-col-2 .write-new-tweet {
 }
 
 /*
-  Header aka user pic/name box stylings
-*/
+ * Header aka user pic/name box stylings
+ */
 .page-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-image: url("../images/header-bg-texture.png");
   background-color: #d54d1c;
-  color: #ffffff;
+  color: whitesmoke;
   height: 44%;
   width: 100%;
   margin-top: 14.9vh;
@@ -188,7 +187,9 @@ nav .nav-col-2 .write-new-tweet {
     display: flex;
   }
 }
-/* Styling for new tweet form */
+/*
+ * Styling for new tweet form
+ */
 .new-tweet {
   display: none;
   flex-direction: column;
@@ -217,17 +218,17 @@ nav .nav-col-2 .write-new-tweet {
 }
 
 .new-tweet-footer {
+  font-family: "Bungee", sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Bungee", sans-serif;
   height: 2rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
 .new-tweet-footer button {
   background-color: #4056a1;
-  color: #ffffff;
+  color: whitesmoke;
   font-size: 1.25rem;
   border-radius: 5px;
   padding: 0.3rem;
@@ -256,10 +257,9 @@ nav .nav-col-2 .write-new-tweet {
 
 .tweet-error {
   display: none;
-  font-family: "Source Sans Pro", sans-serif;
   font-size: 1.25rem;
   text-align: center;
-  width: 85vw;
+  width: 80vw;
   padding: 0.5rem;
   margin-top: 1rem;
   color: #ff0000;
@@ -269,13 +269,13 @@ nav .nav-col-2 .write-new-tweet {
 
 @media screen and (min-width: 1024px) {
   .tweet-error {
-    width: 70%;
+    width: 65%;
     margin-top: 0;
   }
 }
 /* 
-  Styling of individual tweets in tweeter feed
-*/
+ * Styling of individual tweets in tweeter feed
+ */
 article.tweet {
   display: flex;
   flex-direction: column;
@@ -302,7 +302,6 @@ article.tweet header > * {
 }
 article.tweet header .tweet-avatar {
   margin: 1rem;
-  margin-right: 1rem;
   margin-top: 0.4rem;
   height: 4rem;
   width: 4rem;
@@ -326,7 +325,7 @@ article.tweet footer {
   margin: 0.5rem;
   margin-top: 0.33rem;
   border-top: 5px solid #555149;
-  /* Apply to children of .tweet footer */
+  /* Apply to children containers of .tweet footer */
   /* Apply to all icons on a tweet footer */
 }
 article.tweet footer > * {
@@ -344,8 +343,6 @@ article.tweet:hover {
 
 .tweet-info p {
   display: none;
-  align-items: center;
-  font-weight: 300;
 }
 
 /* Mobile specific */
@@ -360,6 +357,8 @@ article.tweet:hover {
 @media screen and (min-width: 500px) {
   .tweet-info p {
     display: flex;
+    align-items: center;
+    font-weight: 400;
   }
 }
 @media screen and (min-width: 1024px) {

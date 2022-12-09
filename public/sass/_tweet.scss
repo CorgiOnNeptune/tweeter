@@ -1,6 +1,6 @@
 /* 
-  Styling of individual tweets in tweeter feed
-*/
+ * Styling of individual tweets in tweeter feed
+ */
 article.tweet {
   display: flex;
   flex-direction: column;
@@ -28,7 +28,6 @@ article.tweet {
 
     .tweet-avatar {
       margin: 1rem;
-      margin-right: 1rem;
       margin-top: 0.4rem;
       height: 4rem;
       width: 4rem;
@@ -56,11 +55,13 @@ article.tweet {
     margin: 0.5rem;
     margin-top: 0.33rem;
     border-top: $tweet-border;
-    /* Apply to children of .tweet footer */
+
+    /* Apply to children containers of .tweet footer */
     > * {
       font-size: 1rem;
       margin: 1rem;
     }
+
     /* Apply to all icons on a tweet footer */
     .tweet-interaction-icons > * {
       margin: 0.5rem;
@@ -75,8 +76,6 @@ article.tweet:hover {
 
 .tweet-info p {
   display: none;
-  align-items: center;
-  font-weight: 300;
 }
 
 /* Mobile specific */
@@ -92,6 +91,8 @@ article.tweet:hover {
 @media screen and (min-width: 500px) {
   .tweet-info p {
     display: flex;
+    align-items: center;
+    font-weight: 400;
   }
 }
 
