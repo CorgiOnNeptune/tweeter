@@ -5,7 +5,8 @@ article.tweet {
   border: 5px solid #555149;
   color: #555149;
   font-size: 1.25rem;
-  height: 25%;
+  min-height: 25%;
+  max-height: 25%;
   width: 80%;
   margin: 1rem;
 }
@@ -13,7 +14,8 @@ article.tweet {
 @media screen and (min-width: 1024px) {
   article.tweet {
     width: 100%;
-    height: 25vh;
+    min-height: 25vh;
+    max-height: 31vh;
     padding: 0.5rem;
   }
 }
@@ -37,14 +39,20 @@ article.tweet header > * {
   margin: 1rem;
 }
 
+@media screen and (max-width: 1024px) {
+  article.tweet header {
+    margin-bottom: -1.5rem;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   article.tweet header {
     margin-top: 4rem;
+    margin-left: -1rem;
   }
 
   article.tweet header > * {
     display: flex;
-    /* margin-bottom: 6rem; */
   }
 }
 
@@ -68,7 +76,6 @@ article.tweet header > * {
 }
 
 .tweet-handle {
-  margin: 0rem;
   color: #7f8392;
   word-wrap: break-word;
 }
@@ -80,7 +87,6 @@ article.tweet header > * {
 .tweet-body p {
   margin-left: 2.5rem;
   margin-right: 2.5rem;
-  margin-bottom: 1rem;
   line-height: 2rem;
   word-wrap: break-word;
 }
