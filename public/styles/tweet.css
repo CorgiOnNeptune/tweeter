@@ -1,14 +1,21 @@
 article.tweet {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  justify-content: center;
   border: 5px solid #555149;
   color: #555149;
   font-size: 1.25rem;
-  font-weight: 400;
-  height: 20%;
-  width: 80vw;
-  margin: 2rem;
+  height: 25%;
+  width: 80%;
+  margin: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  article.tweet {
+    width: 100%;
+    height: 25vh;
+    padding: 0.5rem;
+  }
 }
 
 /* Apply to 'article.tweet' when hovered */
@@ -28,6 +35,17 @@ article.tweet header {
 article.tweet header > * {
   display: flex;
   margin: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  article.tweet header {
+    margin-top: 4rem;
+  }
+
+  article.tweet header > * {
+    display: flex;
+    /* margin-bottom: 6rem; */
+  }
 }
 
 .tweet-info p {
@@ -67,6 +85,12 @@ article.tweet header > * {
   word-wrap: break-word;
 }
 
+@media screen and (min-width: 1024px) {
+  .tweet-body p {
+    margin: 1.5rem;
+  }
+}
+
 article.tweet footer {
   display: flex;
   justify-content: space-between;
@@ -79,6 +103,16 @@ article.tweet footer {
 article.tweet footer > * {
   font-size: 1rem;
   margin: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  article.tweet footer {
+    margin-bottom: 1rem;
+  }
+  article.tweet footer > * {
+    display: flex;
+    margin-bottom: 2rem;
+  }
 }
 
 /* Apply to all icons on a tweet footer */

@@ -33,7 +33,7 @@ body {
   font-size: 1.5rem;
   color: #545149;
   background-color: #f4f1ec;
-  margin-bottom: 12rem;
+  margin-bottom: 5rem;
   width: 100%;
 }
 
@@ -46,7 +46,16 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  /* margin: auto; */
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+  main {
+    margin-top: 15vh;
+  }
 }
 
 .scroll-top-button {
@@ -69,5 +78,14 @@ main {
 }
 
 #tweets-container.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  #tweets-container.container {
+    width: 66.7%;
+  }
 }
