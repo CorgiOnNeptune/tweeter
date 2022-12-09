@@ -8,7 +8,7 @@
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-    "createdAt": 1670400066965
+    "createdAt": 1670318319052
   },
   {
     "user": {
@@ -19,6 +19,17 @@
     "content": {
       "text": "Je pense , donc je suis"
     },
-    "createdAt": 1670486466965
+    "createdAt": 1670404719052
+  },
+  {
+    "user": {
+      "name": "Dog",
+      "avatars": "https://i.imgur.com/ilT4JDe.png",
+      "handle": "@dogonneptune"
+    },
+    "content": {
+      "text": "Listen to Diamonds on Neptune on Spotify! They're super cool!"
+    },
+    "createdAt": 1670491119052
   }
 ]
