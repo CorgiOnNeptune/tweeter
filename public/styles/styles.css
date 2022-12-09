@@ -1,0 +1,397 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+/* em tags pref bold over italic */
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5rem;
+  color: #545149;
+  background-color: #f4f1ec;
+  margin-bottom: 5rem;
+  width: 100%;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+  main {
+    margin-top: 15vh;
+  }
+}
+.scroll-top-button {
+  display: none;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background-color: #4056a1;
+  color: #ffffff;
+  font-size: 2.5rem;
+  border: none;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.scroll-top-button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 15px 1px #a18b40, inset -0.2em -0.2em 0.2em 0 rgba(0, 0, 0, 0.5);
+}
+
+#tweets-container.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  #tweets-container.container {
+    width: 60%;
+  }
+}
+nav {
+  display: flex;
+  background-image: url("../images/header-bg-texture.png");
+  background-color: #a18b40;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  height: 15vh;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056a1;
+    height: 10vh;
+  }
+}
+span {
+  margin: 0.5em;
+}
+
+.logo {
+  font-family: "Bungee", sans-serif;
+  font-size: 2rem;
+}
+
+.nav-col {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.nav-col-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.write-new-tweet {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: -1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .write-new-tweet {
+    font-size: 1.5rem;
+    margin-right: 5rem;
+    margin-top: -2rem;
+    text-align: none;
+  }
+}
+.double-arrows {
+  animation: MoveUpDown 2.5s linear infinite;
+  display: flex;
+  justify-content: center;
+  color: #d54d1c;
+  margin-top: -0.75rem;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+}
+.page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../images/header-bg-texture.png");
+  background-color: #a18b40;
+  color: #ffffff;
+  height: 44%;
+  width: 100%;
+  margin-top: 14.9vh;
+}
+
+@media screen and (min-width: 1024px) {
+  .page-header {
+    width: 50%;
+    margin: 5rem;
+    margin-top: 10rem;
+  }
+}
+.user-name {
+  display: flex;
+  margin: 1.25rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+  .user-name {
+    display: flex;
+  }
+}
+img {
+  margin: 1em;
+}
+
+.new-tweet {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 100vw;
+}
+
+@media screen and (min-width: 1024px) {
+  .new-tweet {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+#new-tweet-text {
+  width: 80vw;
+  border: none;
+  border-bottom: 5px solid #555149;
+  background: none;
+  resize: none;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  #new-tweet-text {
+    width: 40vw;
+    align-self: center;
+  }
+}
+#new-tweet-text:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: #555149;
+  font-weight: 600;
+}
+
+.new-tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Bungee", sans-serif;
+  height: 2rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.new-tweet-footer button {
+  background-color: #4056a1;
+  color: #ffffff;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  padding: 0.3rem;
+}
+
+.new-tweet-footer button:hover {
+  cursor: pointer;
+}
+
+.red-text {
+  color: #ff0000;
+}
+
+.tweet-error {
+  display: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+  width: 85vw;
+  padding: 0.5rem;
+  color: #ff0000;
+  border: 5px solid #ff0000;
+  border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .tweet-error {
+    width: 70%;
+  }
+}
+article.tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 5px solid #555149;
+  color: #555149;
+  font-size: 1.25rem;
+  min-height: 25%;
+  max-height: 25%;
+  width: 80%;
+  margin: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  article.tweet {
+    width: 100%;
+    min-height: 25vh;
+    max-height: 31vh;
+    padding: 0.5rem;
+  }
+}
+/* Apply to 'article.tweet' when hovered */
+article.tweet:hover {
+  box-shadow: 10px 10px 5px #989cac;
+}
+
+article.tweet header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+  top: 0;
+}
+
+/* Apply to children of .tweet header */
+article.tweet header > * {
+  display: flex;
+  margin: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  article.tweet header {
+    margin-bottom: -1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  article.tweet header {
+    margin-top: 4rem;
+    margin-left: -1rem;
+  }
+  article.tweet header > * {
+    display: flex;
+  }
+}
+.tweet-info p {
+  display: none;
+  align-items: center;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 500px) {
+  .tweet-info p {
+    display: flex;
+  }
+}
+.tweet-avatar {
+  margin-right: 1rem;
+  margin-top: 0.4rem;
+  height: 4rem;
+  width: 4rem;
+}
+
+.tweet-handle {
+  color: #7f8392;
+  word-wrap: break-word;
+}
+
+.tweet-handle:hover {
+  color: #a5adca;
+}
+
+.tweet-body p {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  line-height: 2rem;
+  word-wrap: break-word;
+}
+
+@media screen and (min-width: 1024px) {
+  .tweet-body p {
+    margin: 1.5rem;
+  }
+}
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem;
+  margin-top: 0.33rem;
+  border-top: 5px solid #555149;
+}
+
+/* Apply to children of .tweet footer */
+article.tweet footer > * {
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  article.tweet footer {
+    margin-bottom: 1rem;
+  }
+  article.tweet footer > * {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+}
+/* Apply to all icons on a tweet footer */
+.tweet-interaction-icons > * {
+  margin: 0.5rem;
+  margin-top: 0.25rem;
+}
