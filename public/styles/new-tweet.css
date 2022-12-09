@@ -4,12 +4,12 @@
   align-items: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  width: 100%;
+  width: 100vw;
 }
 
 #new-tweet-text {
-  height: 60px;
-  width: 750px;
+  height: 10%;
+  width: 80vw;
   border: none;
   border-bottom: 5px solid #555149;
   background: none;
@@ -55,9 +55,10 @@
 .tweet-error {
   display: none;
   font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.25rem;
   text-align: center;
-  width: 50%;
-  padding: 1rem;
+  width: 85vw;
+  padding: 0.5rem;
   color: #ff0000;
   border: 5px solid #ff0000;
   border-radius: 0.5rem;
