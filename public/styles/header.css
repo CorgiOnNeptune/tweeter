@@ -19,7 +19,7 @@
 }
 
 .user-name {
-  display: none;
+  display: flex;
   margin: 1.25rem;
   font-size: 2.5rem;
   font-weight: 300;

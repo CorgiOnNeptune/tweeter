@@ -54,7 +54,7 @@ article.tweet header > * {
   font-weight: 300;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 500px) {
   .tweet-info p {
     display: flex;
   }
@@ -94,7 +94,7 @@ article.tweet header > * {
 article.tweet footer {
   display: flex;
   justify-content: space-between;
-  margin: 1rem;
+  margin: 0.5rem;
   margin-top: 0.33rem;
   border-top: 5px solid #555149;
 }

@@ -86,6 +86,6 @@ main {
 
 @media screen and (min-width: 1024px) {
   #tweets-container.container {
-    width: 66.7%;
+    width: 60%;
   }
 }
