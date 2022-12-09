@@ -76,3 +76,9 @@
   border: 5px solid #ff0000;
   border-radius: 0.5rem;
 }
+
+@media screen and (min-width: 1024px) {
+  .tweet-error {
+    width: 70%;
+  }
+}
