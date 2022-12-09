@@ -6,8 +6,7 @@
 
 $(document).ready(function() {
   
-  $('.nav-col-2').click(function () {
-    
+  $('.nav-col-2').click(function() {
     // animate function located in '/helpers.js'
     animateNewTweetForm();
   });
@@ -36,8 +35,8 @@ $(document).ready(function() {
           this.reset();
         });
         loadTweets();
-      
       })
+
       .catch((err) => {
         console.log('error', err);
       });

@@ -35,11 +35,11 @@ const animateNewTweetForm = () => {
   if (!$newTweet.is(':visible')) {
     $newTweet.slideDown({
       duration: 'slow',
-      start: function () {
+      start: function() {
         $newTweet.css('display', 'flex');
         window.scrollTo({ top: 0, behavior: 'smooth' });
       },
-      complete: function () {
+      complete: function() {
         $('#new-tweet-text').focus();
       }
     });

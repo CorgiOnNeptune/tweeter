@@ -1,5 +1,5 @@
-$(document).ready(function () {
-  $('#new-tweet-text').on('input', function () {
+$(document).ready(function() {
+  $('#new-tweet-text').on('input', function() {
     const $counter = $('.counter');
     const tweetLength = $(this).val().length;
     const counterLength = 140 - tweetLength;
@@ -8,7 +8,7 @@ $(document).ready(function () {
     $counter.val(counterLength);
   });
 
-  $(window).scroll(function () {
+  $(window).scroll(function() {
     const scrollHeight = $('nav').height() * 3;
     const scrollButton = $('.scroll-top-button');
     const navButton = $('.nav-col-2');
@@ -24,7 +24,7 @@ $(document).ready(function () {
     }
   });
   
-  $('.scroll-top-button').click(function () {
+  $('.scroll-top-button').click(function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     if (!$('.new-tweet').is(':visible')) {
