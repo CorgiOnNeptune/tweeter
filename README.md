@@ -24,20 +24,19 @@ If you add some tweets and scroll down the page, the nav "write a new tweet" but
 
 ## Final Product
 
+### Animations Demo
+
 !['Demo of animations at desktop size'](https://github.com/CorgiOnNeptune/tweeter/blob/master/docs/animations-demo.gif?raw=true)
+
+### Screenshots on Desktop/Mobile View
 
 !['Screenshot of main page on desktop'](https://github.com/CorgiOnNeptune/tweeter/blob/master/docs/desktop-view.png?raw=true)
 
 !['Screenshot of main page on mobile'](https://github.com/CorgiOnNeptune/tweeter/blob/master/docs/mobile-view.png?raw=true)
 
-&nbsp;
-
-<details>
-  <summary>Error screenshot</summary>
+### Screenshot of Error
 
 !['Error in tablet size'](https://github.com/CorgiOnNeptune/tweeter/blob/master/docs/tablet-error.png?raw=true)
-
-</details>
 
 &nbsp;
 
