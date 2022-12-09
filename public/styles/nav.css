@@ -7,13 +7,15 @@ nav {
   top: 0;
   height: 15vh;
   width: 100%;
+  padding: 1.5rem;
 }
 
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   nav {
-    height: 10vh;
+    padding-right: 5rem;
+    padding-left: 5rem;
   }
-} */
+}
 
 @media screen and (min-width: 1024px) {
   nav {
@@ -29,8 +31,6 @@ span {
 .logo {
   font-family: 'Bungee', sans-serif;
   font-size: 2rem;
-  margin-left: 0.5em;
-  margin-top: 2rem;
 }
 
 .nav-col {
@@ -49,13 +49,14 @@ span {
 .write-new-tweet {
   font-size: 1.25rem;
   text-align: center;
+  margin-top: -1.5rem;
 }
 
 @media screen and (min-width: 768px) {
   .write-new-tweet {
     font-size: 1.5rem;
-    margin-right: 2rem;
-    margin-top: 0;
+    margin-right: 5rem;
+    margin-top: -2rem;
     text-align: none;
   }
 }
