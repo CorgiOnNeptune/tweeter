@@ -4,3 +4,13 @@
 @import '_header.scss';
 @import '_new-tweet.scss';
 @import '_tweet.scss';
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+}

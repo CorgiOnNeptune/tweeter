@@ -1,3 +1,6 @@
+/*
+  Header aka user pic/name box stylings
+*/
 .page-header {
   display: flex;
   flex-direction: column;
@@ -8,6 +11,17 @@
   height: 44%;
   width: 100%;
   margin-top: 14.9vh;
+
+  .user-name {
+    display: flex;
+    margin: 1.25rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+
+  img {
+    margin: 1em;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -18,19 +32,8 @@
   }
 }
 
-.user-name {
-  display: flex;
-  margin: 1.25rem;
-  font-size: 2.5rem;
-  font-weight: 300;
-}
-
 @media screen and (min-width: 768px) {
   .user-name {
     display: flex;
   }
-}
-
-img {
-  margin: 1em;
 }

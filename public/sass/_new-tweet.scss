@@ -1,3 +1,4 @@
+/* Styling for new tweet form */
 .new-tweet {
   display: none;
   flex-direction: column;
@@ -5,13 +6,6 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
   width: 100vw;
-}
-
-@media screen and (min-width: 1024px) {
-  .new-tweet {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
 }
 
 #new-tweet-text {
@@ -23,20 +17,13 @@
   overflow: hidden;
 }
 
-@media screen and (min-width: 1024px) {
-  #new-tweet-text {
-    width: 40vw;
-    align-self: center;
-  }
+#new-tweet-text::placeholder {
+  color: #555149;
+  font-weight: 600;
 }
 
 #new-tweet-text:focus {
   outline: none;
-}
-
-::placeholder {
-  color: #555149;
-  font-weight: 600;
 }
 
 .new-tweet-footer {
@@ -47,20 +34,36 @@
   height: 2rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+
+  button {
+    background-color: $theme-color;
+    color: #ffffff;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    padding: 0.3rem;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
 }
 
-.new-tweet-footer button {
-  background-color: $theme-color;
-  color: #ffffff;
-  font-size: 1.25rem;
-  border-radius: 5px;
-  padding: 0.3rem;
+/* Desktop stylings for new tweet form */
+@media screen and (min-width: 1024px) {
+  .new-tweet {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 
-.new-tweet-footer button:hover {
-  cursor: pointer;
+@media screen and (min-width: 1024px) {
+  #new-tweet-text {
+    width: 40vw;
+    align-self: center;
+  }
 }
 
+/* Red for negative char counter */
 .red-text {
   color: #ff0000;
 }
@@ -72,6 +75,7 @@
   text-align: center;
   width: 85vw;
   padding: 0.5rem;
+  margin-top: 1rem;
   color: #ff0000;
   border: 5px solid #ff0000;
   border-radius: 0.5rem;
@@ -80,5 +84,6 @@
 @media screen and (min-width: 1024px) {
   .tweet-error {
     width: 70%;
+    margin-top: 0;
   }
 }

@@ -1,11 +1,3 @@
-@keyframes MoveUpDown {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-0.5rem);
-  }
-}
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -40,9 +32,6 @@ body {
   width: 100%;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 main {
   display: flex;
   flex-direction: column;
@@ -50,6 +39,14 @@ main {
   width: 100%;
 }
 
+#tweets-container.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Main containers desktop stylings */
 @media screen and (min-width: 1024px) {
   body {
     display: flex;
@@ -59,18 +56,14 @@ main {
     margin-top: 15vh;
   }
 }
-#tweets-container.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
 @media screen and (min-width: 1024px) {
   #tweets-container.container {
     width: 60%;
   }
 }
+/*
+  Nav bar stylings
+*/
 nav {
   display: flex;
   background-image: url("../images/header-bg-texture.png");
@@ -82,7 +75,44 @@ nav {
   width: 100%;
   padding: 1.5rem;
 }
+nav span {
+  margin: 0.5em;
+}
+nav .logo {
+  font-family: "Bungee", sans-serif;
+  font-size: 2rem;
+}
+nav .nav-col {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+nav .nav-col-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+nav .nav-col-2 .write-new-tweet {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: -1.5rem;
+}
 
+.double-arrows {
+  animation: MoveUpDown 2.5s linear infinite;
+  display: flex;
+  justify-content: center;
+  color: #4056a1;
+  margin-top: -0.75rem;
+}
+
+/* Mobile nav bar stylings */
+@media screen and (min-width: 1024px) {
+  .double-arrows {
+    color: #d54d1c;
+  }
+}
 @media screen and (min-width: 768px) {
   nav {
     padding-right: 5rem;
@@ -95,34 +125,6 @@ nav {
     height: 10vh;
   }
 }
-span {
-  margin: 0.5em;
-}
-
-.logo {
-  font-family: "Bungee", sans-serif;
-  font-size: 2rem;
-}
-
-.nav-col {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-}
-
-.nav-col-2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  cursor: pointer;
-}
-
-.write-new-tweet {
-  font-size: 1.25rem;
-  text-align: center;
-  margin-top: -1.5rem;
-}
-
 @media screen and (min-width: 768px) {
   .write-new-tweet {
     font-size: 1.5rem;
@@ -131,19 +133,7 @@ span {
     text-align: none;
   }
 }
-.double-arrows {
-  animation: MoveUpDown 2.5s linear infinite;
-  display: flex;
-  justify-content: center;
-  color: #4056a1;
-  margin-top: -0.75rem;
-}
-
-@media screen and (min-width: 1024px) {
-  .double-arrows {
-    color: #d54d1c;
-  }
-}
+/* Scroll to top button styles */
 .scroll-top-button {
   display: none;
   position: fixed;
@@ -162,6 +152,9 @@ span {
   box-shadow: 0px 0px 15px 1px #d54d1c, inset -0.2em -0.2em 0.2em 0 rgba(0, 0, 0, 0.5);
 }
 
+/*
+  Header aka user pic/name box stylings
+*/
 .page-header {
   display: flex;
   flex-direction: column;
@@ -173,6 +166,15 @@ span {
   width: 100%;
   margin-top: 14.9vh;
 }
+.page-header .user-name {
+  display: flex;
+  margin: 1.25rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+.page-header img {
+  margin: 1em;
+}
 
 @media screen and (min-width: 1024px) {
   .page-header {
@@ -181,22 +183,12 @@ span {
     margin-top: 10rem;
   }
 }
-.user-name {
-  display: flex;
-  margin: 1.25rem;
-  font-size: 2.5rem;
-  font-weight: 300;
-}
-
 @media screen and (min-width: 768px) {
   .user-name {
     display: flex;
   }
 }
-img {
-  margin: 1em;
-}
-
+/* Styling for new tweet form */
 .new-tweet {
   display: none;
   flex-direction: column;
@@ -206,12 +198,6 @@ img {
   width: 100vw;
 }
 
-@media screen and (min-width: 1024px) {
-  .new-tweet {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-}
 #new-tweet-text {
   width: 80vw;
   border: none;
@@ -221,19 +207,13 @@ img {
   overflow: hidden;
 }
 
-@media screen and (min-width: 1024px) {
-  #new-tweet-text {
-    width: 40vw;
-    align-self: center;
-  }
-}
-#new-tweet-text:focus {
-  outline: none;
-}
-
-::placeholder {
+#new-tweet-text::placeholder {
   color: #555149;
   font-weight: 600;
+}
+
+#new-tweet-text:focus {
+  outline: none;
 }
 
 .new-tweet-footer {
@@ -245,7 +225,6 @@ img {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
-
 .new-tweet-footer button {
   background-color: #4056a1;
   color: #ffffff;
@@ -253,11 +232,24 @@ img {
   border-radius: 5px;
   padding: 0.3rem;
 }
-
 .new-tweet-footer button:hover {
   cursor: pointer;
 }
 
+/* Desktop stylings for new tweet form */
+@media screen and (min-width: 1024px) {
+  .new-tweet {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #new-tweet-text {
+    width: 40vw;
+    align-self: center;
+  }
+}
+/* Red for negative char counter */
 .red-text {
   color: #ff0000;
 }
@@ -269,6 +261,7 @@ img {
   text-align: center;
   width: 85vw;
   padding: 0.5rem;
+  margin-top: 1rem;
   color: #ff0000;
   border: 5px solid #ff0000;
   border-radius: 0.5rem;
@@ -277,8 +270,12 @@ img {
 @media screen and (min-width: 1024px) {
   .tweet-error {
     width: 70%;
+    margin-top: 0;
   }
 }
+/* 
+  Styling of individual tweets in tweeter feed
+*/
 article.tweet {
   display: flex;
   flex-direction: column;
@@ -291,86 +288,37 @@ article.tweet {
   width: 80%;
   margin: 1rem;
 }
-
-@media screen and (min-width: 1024px) {
-  article.tweet {
-    width: 100%;
-    min-height: 25vh;
-    max-height: 31vh;
-    padding: 0.5rem;
-  }
-}
-/* Apply to 'article.tweet' when hovered */
-article.tweet:hover {
-  box-shadow: 10px 10px 5px #989cac;
-}
-
 article.tweet header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10%;
   top: 0;
+  /* Apply to children of .tweet header */
 }
-
-/* Apply to children of .tweet header */
 article.tweet header > * {
   display: flex;
   margin: 1rem;
 }
-
-@media screen and (max-width: 1024px) {
-  article.tweet header {
-    margin-bottom: -1.5rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  article.tweet header {
-    margin-top: 4rem;
-    margin-left: -1rem;
-  }
-  article.tweet header > * {
-    display: flex;
-  }
-}
-.tweet-info p {
-  display: none;
-  align-items: center;
-  font-weight: 300;
-}
-
-@media screen and (min-width: 500px) {
-  .tweet-info p {
-    display: flex;
-  }
-}
-.tweet-avatar {
+article.tweet header .tweet-avatar {
+  margin: 1rem;
   margin-right: 1rem;
   margin-top: 0.4rem;
   height: 4rem;
   width: 4rem;
 }
-
-.tweet-handle {
+article.tweet header .tweet-handle {
   color: #7f8392;
   word-wrap: break-word;
 }
-
-.tweet-handle:hover {
+article.tweet header .tweet-handle :hover {
   color: #a5adca;
 }
-
-.tweet-body p {
+article.tweet .tweet-body p {
   margin-left: 2.5rem;
   margin-right: 2.5rem;
   line-height: 2rem;
   word-wrap: break-word;
-}
-
-@media screen and (min-width: 1024px) {
-  .tweet-body p {
-    margin: 1.5rem;
-  }
 }
 article.tweet footer {
   display: flex;
@@ -378,25 +326,78 @@ article.tweet footer {
   margin: 0.5rem;
   margin-top: 0.33rem;
   border-top: 5px solid #555149;
+  /* Apply to children of .tweet footer */
+  /* Apply to all icons on a tweet footer */
 }
-
-/* Apply to children of .tweet footer */
 article.tweet footer > * {
   font-size: 1rem;
   margin: 1rem;
 }
+article.tweet footer .tweet-interaction-icons > * {
+  margin: 0.5rem;
+  margin-top: 0.25rem;
+}
 
+article.tweet:hover {
+  box-shadow: 10px 10px 5px #989cac;
+}
+
+.tweet-info p {
+  display: none;
+  align-items: center;
+  font-weight: 300;
+}
+
+/* Mobile specific */
+@media screen and (max-width: 1024px) {
+  article.tweet header {
+    margin-bottom: -1.5rem;
+  }
+}
+/* 
+  Desktop styling for tweet feed articles
+*/
+@media screen and (min-width: 500px) {
+  .tweet-info p {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  article.tweet {
+    width: 100%;
+    min-height: 25vh;
+    max-height: 31vh;
+    padding: 0.5rem;
+  }
+  article.tweet header {
+    margin-top: 4rem;
+    margin-left: -1rem;
+    /* Apply to children of header */
+  }
+  article.tweet header > * {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .tweet-body p {
+    margin: 1.5rem;
+  }
+}
 @media screen and (min-width: 1024px) {
   article.tweet footer {
     margin-bottom: 1rem;
+    /* Children of footer */
   }
   article.tweet footer > * {
     display: flex;
     margin-bottom: 2rem;
   }
 }
-/* Apply to all icons on a tweet footer */
-.tweet-interaction-icons > * {
-  margin: 0.5rem;
-  margin-top: 0.25rem;
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
 }

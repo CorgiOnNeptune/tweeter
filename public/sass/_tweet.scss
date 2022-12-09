@@ -1,3 +1,6 @@
+/* 
+  Styling of individual tweets in tweeter feed
+*/
 article.tweet {
   display: flex;
   flex-direction: column;
@@ -9,51 +12,65 @@ article.tweet {
   max-height: 25%;
   width: 80%;
   margin: 1rem;
-}
 
-@media screen and (min-width: 1024px) {
-  article.tweet {
-    width: 100%;
-    min-height: 25vh;
-    max-height: 31vh;
-    padding: 0.5rem;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    top: 0;
+
+    /* Apply to children of .tweet header */
+    > * {
+      display: flex;
+      margin: 1rem;
+    }
+
+    .tweet-avatar {
+      margin: 1rem;
+      margin-right: 1rem;
+      margin-top: 0.4rem;
+      height: 4rem;
+      width: 4rem;
+    }
+
+    .tweet-handle {
+      color: #7f8392;
+      word-wrap: break-word;
+      :hover {
+        color: #a5adca;
+      }
+    }
+  }
+
+  .tweet-body p {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    line-height: 2rem;
+    word-wrap: break-word;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+    margin-top: 0.33rem;
+    border-top: $tweet-border;
+    /* Apply to children of .tweet footer */
+    > * {
+      font-size: 1rem;
+      margin: 1rem;
+    }
+    /* Apply to all icons on a tweet footer */
+    .tweet-interaction-icons > * {
+      margin: 0.5rem;
+      margin-top: 0.25rem;
+    }
   }
 }
 
-/* Apply to 'article.tweet' when hovered */
 article.tweet:hover {
   box-shadow: 10px 10px 5px #989cac;
-}
-
-article.tweet header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 10%;
-  top: 0;
-}
-
-/* Apply to children of .tweet header */
-article.tweet header > * {
-  display: flex;
-  margin: 1rem;
-}
-
-@media screen and (max-width: 1024px) {
-  article.tweet header {
-    margin-bottom: -1.5rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  article.tweet header {
-    margin-top: 4rem;
-    margin-left: -1rem;
-  }
-
-  article.tweet header > * {
-    display: flex;
-  }
 }
 
 .tweet-info p {
@@ -62,33 +79,39 @@ article.tweet header > * {
   font-weight: 300;
 }
 
+/* Mobile specific */
+@media screen and (max-width: 1024px) {
+  article.tweet header {
+    margin-bottom: -1.5rem;
+  }
+}
+
+/* 
+  Desktop styling for tweet feed articles
+*/
 @media screen and (min-width: 500px) {
   .tweet-info p {
     display: flex;
   }
 }
 
-.tweet-avatar {
-  margin-right: 1rem;
-  margin-top: 0.4rem;
-  height: 4rem;
-  width: 4rem;
-}
+@media screen and (min-width: 1024px) {
+  article.tweet {
+    width: 100%;
+    min-height: 25vh;
+    max-height: 31vh;
+    padding: 0.5rem;
 
-.tweet-handle {
-  color: #7f8392;
-  word-wrap: break-word;
-}
+    header {
+      margin-top: 4rem;
+      margin-left: -1rem;
 
-.tweet-handle:hover {
-  color: #a5adca;
-}
-
-.tweet-body p {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-  line-height: 2rem;
-  word-wrap: break-word;
+      /* Apply to children of header */
+      > * {
+        display: flex;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -97,32 +120,14 @@ article.tweet header > * {
   }
 }
 
-article.tweet footer {
-  display: flex;
-  justify-content: space-between;
-  margin: 0.5rem;
-  margin-top: 0.33rem;
-  border-top: $tweet-border;
-}
-
-/* Apply to children of .tweet footer */
-article.tweet footer > * {
-  font-size: 1rem;
-  margin: 1rem;
-}
-
 @media screen and (min-width: 1024px) {
   article.tweet footer {
     margin-bottom: 1rem;
-  }
-  article.tweet footer > * {
-    display: flex;
-    margin-bottom: 2rem;
-  }
-}
 
-/* Apply to all icons on a tweet footer */
-.tweet-interaction-icons > * {
-  margin: 0.5rem;
-  margin-top: 0.25rem;
+    /* Children of footer */
+    > * {
+      display: flex;
+      margin-bottom: 2rem;
+    }
+  }
 }
