@@ -35,7 +35,15 @@ $(document).ready(function() {
           this.reset();
         });
         animateNewTweetForm();
-        loadTweets();
+        $.ajax({
+          method: 'GET',
+          url: '/tweets',
+          success: function (res) {
+            const $tweet = createTweetElement(res[res.length - 1]);
+            $('#tweets-container').prepend($tweet);
+            solidIcons(); 
+          }
+        });
       })
 
       .catch((err) => {
