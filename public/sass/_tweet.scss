@@ -2,8 +2,7 @@
  * Styling of individual tweets in tweeter feed
  */
 article.tweet {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
   justify-content: center;
   border: $tweet-border;
   color: #555149;

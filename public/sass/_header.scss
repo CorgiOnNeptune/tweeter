@@ -2,8 +2,7 @@
  * Header aka user pic/name box stylings
  */
 .page-header {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
   align-items: center;
   background-image: $nav-bg-image;
   background-color: $theme-complimentary;

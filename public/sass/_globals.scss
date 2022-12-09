@@ -2,3 +2,8 @@ $nav-bg-image: url('../images/header-bg-texture.png');
 $tweet-border: 5px solid #555149;
 $theme-color: #4056a1;
 $theme-complimentary: #d54d1c;
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}

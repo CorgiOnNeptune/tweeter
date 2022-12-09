@@ -33,15 +33,13 @@ body {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
   align-items: center;
   width: 100%;
 }
 
 #tweets-container.container {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
   align-items: center;
   width: 100%;
 }
@@ -50,7 +48,6 @@ main {
 @media screen and (min-width: 1024px) {
   body {
     display: flex;
-    flex-direction: row;
   }
   main {
     margin-top: 15vh;
