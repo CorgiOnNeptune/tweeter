@@ -34,6 +34,7 @@ $(document).ready(function() {
         $(this).each(function() {
           this.reset();
         });
+        animateNewTweetForm();
         loadTweets();
       })
 
