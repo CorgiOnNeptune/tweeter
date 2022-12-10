@@ -5,67 +5,26 @@
  */
 
 $(document).ready(function() {
-  
-  $('.nav-col-2').click(function() {
-    // animate function located in '/helpers.js'
-    animateNewTweetForm();
-  });
-
-  // AJAX POST new tweet to '/tweets'
-  $('#tweet-form').submit(function(event) {
-    event.preventDefault();
-
-    const $form = $(this);
-    const $error = $('.tweet-error');
-    const url = $form.attr('action');
-    const inputText = $form.children($('textarea')).val();
-
-    // handleError function located in '/helpers.js'
-    handleErrorHTML(inputText.length > 140, $error, 'Your message is too long');
-    handleErrorHTML(!inputText, $error, 'You did not enter a message');
-
-    $.ajax({
-      method: 'POST',
-      data: $form.serialize(),
-      url,
-    })
-      .then(() => {
-        $error.slideUp('slow');
-        $(this).each(function() {
-          this.reset();
-        });
-        animateNewTweetForm();
-        $.ajax({
-          method: 'GET',
-          url: '/tweets',
-          success: function (res) {
-            const $tweet = createTweetElement(res[res.length - 1]);
-            $('#tweets-container').prepend($tweet);
-            solidIcons(); 
-          }
-        });
-      })
-
-      .catch((err) => {
-        console.log('error', err);
-      });
-  });
-
-  // AJAX GET tweets from server '/tweets'
-  const loadTweets = () => {
-    $.ajax({
-      method: 'GET',
-      url: '/tweets'
-    })
-      .then((data) => {
-        renderTweets(data);
-        solidIcons();
-      })
-
-      .catch((err) => {
-        console.log('error ➡️ ', err);
-      });
-  };
-
   loadTweets();
+
+  $('#tweet-form').on('submit', function(event) {
+    event.preventDefault();
+    submitNewTweet(this);
+  });
+
+  // Animates new tweet form when accessing it via the nav button
+  $('.nav-col-2').on('click', () => animateNewTweetForm());
+
+  // Animate the character counter for the new tweet form
+  $('#new-tweet-text').on('input', function() {
+    charCounter(this);
+  });
+
+  // Animate in/out for the scroll-top button and nav 'write-new-tweet' based on user's position on page
+  $(window).on('scroll', function() {
+    animateScrollButton(this);
+  });
+
+  // Upon clicking the scroll-top button, smooth scroll animation to top and open tweet form if it is closed
+  $('.scroll-top-button').on('click', () => scrollPage());
 });
